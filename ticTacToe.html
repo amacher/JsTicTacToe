@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <link rel="stylesheet" type="text/css" href="tic.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1>Tic Tac Toe</h1>
+        <p class="ins">Select number of player and hit 'Start'.<br/>
+            First Player starts as <strong>X</strong> and Second Player/Computer is <strong>O</strong>.
+        </p>
+        <p class="ins">How many players:</p>
+        <div class="playButtons">
+            <input type="radio" name="player" id='player1' value="player1" checked="checked">1 Player
+            <input type="radio" name="player" id='player2' value="player2">2 Player
+            <br/>
+            <button id="BUTTON" onclick="players_t()">START</button>
+        </div>
+       
+<!-- Tic Tac Toe Board-->
+    <input type="text" class="cells" id="c1" onclick="toChk('c1'); theGame();" readonly>
+    <input type="text" class="cells" id="c2" onclick="toChk('c2'); theGame();" readonly>
+    <input type="text" class="cells" id="c3" onclick="toChk('c3'); theGame();" readonly>
+    <br/>
+    <input type="text" class="cells" id="c4" onclick="toChk('c4'); theGame();" readonly>
+    <input type="text" class="cells" id="c5" onclick="toChk('c5'); theGame();" readonly>
+    <input type="text" class="cells" id="c6" onclick="toChk('c6'); theGame();" readonly>
+    <br/>
+    <input type="text" class="cells" id="c7" onclick="toChk('c7'); theGame();" readonly>
+    <input type="text" class="cells" id="c8" onclick="toChk('c8'); theGame();" readonly>
+    <input type="text" class="cells" id="c9" onclick="toChk('c9'); theGame();" readonly>
+<!--End of Board-->
+    <br/>
+    <button id="BUTTON" onclick="theGame_reset()">RESET</button>
+    <br/>
+    <!--Show player Turn-->
+    <p id='print'></p>
+    </div>
+</body>
+<script src="tic.js"></script>
