@@ -13,10 +13,10 @@
         </p>
         <p class="ins">How many players:</p>
         <div class="playButtons">
-            <input type="radio" name="player" id='player1' value="player1" checked="checked">1 Player
-            <input type="radio" name="player" id='player2' value="player2">2 Player
+            <input type="radio" name="player" id='player1' value="player1" checked="checked" accesskey="a" >1 Pl<u>a</u>yer
+            <input type="radio" name="player" id='player2' value="player2" accesskey="e" >2 Play<u>e</u>r
             <br/>
-            <button id="BUTTON" onclick="players_t()">START</button>
+            <button id="BUTTON" onclick="players_t()"><u>S</u>TART</button>
         </div>
        
 <!-- Tic Tac Toe Board-->
@@ -33,10 +33,37 @@
     <input type="text" class="cells" id="c9" onclick="toChk('c9'); theGame();" readonly>
 <!--End of Board-->
     <br/>
-    <button id="BUTTON" onclick="theGame_reset()">RESET</button>
+    <button id="BUTTON" onclick="theGame_reset()"><u>R</u>ESET</button>
     <br/>
     <!--Show player Turn-->
     <p id='print'></p>
+    </div>
+    <div align = "center">
+        <h2>Keyboard instructions</h2>
+        <p>If you would like to use the keyboard:</p>
+        <p><b>First Select # of players (defaults to 1):</b></p>
+        <p>'a' = 1 player; 'e' = 2 Player</p>
+        <p><b>Then hit 's' to Start the game.</b></p>
+        <p><b>Then hit 'r' to Reset the game.</b></p>
+        <p><b>To play the board</b></p>
+        <p>Set to work best with a number pad.</p>
+        <table border="1">
+            <tr>
+                <td>'u' or 7</td>
+                <td>'i' or 8</td>
+                <td>'o' or 9</td>
+            </tr>
+            <tr>
+                <td>'j' or 4</td>
+                <td>'k' or 5</td>
+                <td>'l' or 6</td>
+            </tr>
+            <tr>
+                <td>'n' or 1</td>
+                <td>'m' or 2</td>
+                <td>',' or 3</td>
+            </tr>
+        </table>
     </div>
 </body>
 <script src="tic.js"></script>

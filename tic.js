@@ -2,6 +2,52 @@ let flag = 1;
 let players = 0;
 openBoard(true)
 
+document.addEventListener("keypress", function onEvent(event) {
+    if (event.key === "a") {
+        document.getElementById("player1").checked = true;
+        play=1;
+    }
+    else if (event.key === "e") {
+        document.getElementById("player2").checked = true;
+        play=2;
+    }
+    else if (event.key === "s") {
+        players_t()
+    }
+    else if (event.key === "r") {
+        theGame_reset()
+    }
+    if (players != 0){
+        if (event.key === "7" || event.key === "u") {
+            toChk('c1'); theGame();
+        }
+        else if (event.key === "8" || event.key === "i") {
+            toChk('c2'); theGame();
+        }
+        else if (event.key === "9" || event.key === "o") {
+            toChk('c3'); theGame();
+        }
+        else if (event.key === "4" || event.key === "j") {
+            toChk('c4'); theGame();
+        }
+        else if (event.key === "5" || event.key === "k") {
+            toChk('c5'); theGame();
+        }
+        else if (event.key === "6" || event.key === "l") {
+            toChk('c6'); theGame();
+        }
+        else if (event.key === "1" || event.key === "n") {
+            toChk('c7'); theGame();
+        }
+        else if (event.key === "2" || event.key === "m") {
+            toChk('c8'); theGame();
+        }
+        else if (event.key === "3" || event.key === ",") {
+            toChk('c9'); theGame();
+        }
+    }
+});
+
 function players_t(){
     if(document.getElementById('player1').checked == true) {   
         players = 1;
@@ -77,6 +123,7 @@ function theGame() {
         if (c8 =='') {freeSpaces.push('c8');}
         if (c9 =='') {freeSpaces.push('c9');}
     }
+    let play = 0;
 
     //Check if X won; then disable all other fields
     if ((c1 == 'X' && c2 == 'X' && c3 =='X') || (c1 == 'X' && c4 == 'X' && c7 =='X') || (c7 == 'X' && c8 == 'X' && c9 =='X') ||
